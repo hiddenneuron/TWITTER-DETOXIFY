@@ -1,4 +1,3 @@
-
 # 🌟 TWITTER-DETOXIFY 🚀
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)
@@ -10,27 +9,27 @@
 
 ## ✨ Overview
 
-TWITTER-DETOXIFY is a **browser extension** designed to help you take control of your Twitter/X experience. It empowers you to filter out unwanted content, block the site for focused work periods, and gain insights into what's being filtered, creating a more positive and productive online environment. 🌈
+**TWITTER-DETOXIFY** is a lightweight browser extension that enhances your Twitter/X experience. It lets you filter out distracting or toxic content, schedule focus periods by blocking access, and gain insight into how your feed is curated — all with a user-friendly interface. 🌈
 
 ---
 
 ## ⚙️ Features
 
-✅ **Site Blocker**: Set a timer (hours/minutes) to block access to Twitter/X, helping you stay focused.  
-✅ **Keyword Filtering**: Hide tweets containing specific keywords or phrases you define.  
-✅ **User Blocking**: Hide tweets from specified user accounts (enter usernames without '@').  
-✅ **Content-Type Filtering**: Option to hide tweets containing images or videos.  
-✅ **Detoxification Summary**: View statistics on how many tweets have been filtered by keywords, users, images, or videos.  
-✅ **User-Friendly Popup**: Intuitive interface to manage all settings and view stats directly from your browser toolbar.  
-✅ **Persistent Settings**: Your preferences are saved locally in your browser.
+- ✅ **Site Blocker** – Block access to Twitter/X for a specified time to boost focus.
+- ✅ **Keyword Filtering** – Hide tweets containing certain keywords or phrases.
+- ✅ **User Blocking** – Remove tweets from specific users (by username).
+- ✅ **Content-Type Filtering** – Hide tweets with images or videos.
+- ✅ **Detox Summary** – View real-time stats about filtered content.
+- ✅ **Popup Interface** – Easily accessible via the browser toolbar.
+- ✅ **Persistent Settings** – All preferences are saved locally.
 
 ---
 
 ## 🛠️ Tech Stack
 
-* **Frontend**: HTML, CSS (Tailwind CSS), JavaScript (Vanilla)  
-* **Browser APIs**: Chrome Storage, Chrome Messaging, Chrome Scripting  
-* **Build Tooling**: Node.js/npm for Tailwind CSS compilation
+- **Frontend**: HTML, CSS (Tailwind CSS), JavaScript (Vanilla)
+- **Browser APIs**: Chrome Storage, Messaging, Scripting
+- **Build Tools**: Node.js, npm (used for Tailwind builds only)
 
 ---
 
@@ -38,156 +37,150 @@ TWITTER-DETOXIFY is a **browser extension** designed to help you take control of
 
 ### Prerequisites
 
-* A Chromium-based browser (e.g., Google Chrome, Microsoft Edge, Brave)
-* [Node.js](https://nodejs.org/) and npm (only if you plan to modify styles or contribute to development)
+- A Chromium-based browser (e.g., Chrome, Edge, Brave)
+- [Node.js](https://nodejs.org/) and npm (only required for customizing styles)
 
-### Installation
+---
 
-1. **Clone the repository:**
+### 🧩 Installation (No Code Changes)
+
+> _If you only want to use the extension and **don’t plan to modify any styles**, follow these steps:_
+
+1. **Clone the repository**:
     ```bash
     git clone https://github.com/KunjShah95/TWITTER-DETOXIFY.git
     cd TWITTER-DETOXIFY
     ```
 
-2. **(Optional) Install dependencies and build CSS (if you made style changes):**
-    If you don't plan to change styles, you can skip this step as `src/output.css` is already provided.
+2. **Load the Extension in Your Browser**:
+    - Open your browser and go to:
+      - Chrome/Edge: `chrome://extensions/`
+      - Brave: `brave://extensions/`
+    - Enable **Developer Mode** (top right toggle).
+    - Click **"Load unpacked"** and select the `src/` folder.
+
+You're all set! 🎉 The extension icon should now appear in your toolbar.
+
+---
+
+### 🧑‍💻 Installation (For Developers or Style Customization)
+
+> _If you want to edit Tailwind CSS or change the UI, follow these steps:_
+
+1. **Install dependencies**:
     ```bash
     npm install
+    ```
+
+2. **Build the CSS**:
+    ```bash
     npm run build:css
     ```
 
-3. **Load the Extension in Your Browser:**
-    * Open your browser and navigate to the extensions page:
-        * Chrome/Edge: `chrome://extensions/`
-        * Brave: `brave://extensions/`
-    * Enable **"Developer mode"** (usually a toggle in the top right corner)
-    * Click on **"Load unpacked"**
-    * Select the `src` directory from the cloned `TWITTER-DETOXIFY` project
+3. (Optional) **Watch for changes** while developing:
+    ```bash
+    npm run watch:css
+    ```
 
-The Twitter Detoxifier icon should now appear in your browser's toolbar!
+4. Follow the **load extension** instructions above to use the updated build.
 
 ---
 
 ## 📖 Usage
 
-1. **Open the Popup:** Click the Twitter Detoxifier icon in your browser toolbar.
+1. **Open the Extension** – Click the Detoxifier icon in your browser.
 
-2. **Site Blocker:**
-    * In the "Site Blocker" section, select the desired **Hours** and **Minutes**
-    * Click **"Start Site Block"**
-    * To unblock before the timer ends, open the popup and click **"Unlock Site Now"**
+2. **Site Blocker** – Set hours and minutes to temporarily block Twitter/X.
 
-3. **Keyword Filtering:**
-    * Navigate to the "Keyword Filtering" section
-    * Enter keywords you wish to hide, one per line, in the textarea
-    * Click **"Save Keywords"**
-    * Use the "x" icon within the textarea to quickly clear your input
+3. **Keyword Filter** – Enter one keyword/phrase per line, then save.
 
-4. **User Blocking:**
-    * Go to the "User Blocking" section
-    * Enter Twitter usernames (one per line, **without the `@` symbol**) whose tweets you want to hide
-    * Click **"Save Blocked Users"**
-    * Use the "x" icon within the textarea to clear your input
+4. **User Blocker** – Enter one username per line (no `@`), then save.
 
-5. **Content Filtering:**
-    * In the "Content Filtering" section, check/uncheck:
-        * "Hide tweets with images"
-        * "Hide tweets with videos"
-    * Click **"Apply Content Filters"**
+5. **Content Filter** – Toggle checkboxes to hide tweets with images/videos.
 
-6. **Detox Summary:**
-    * The "Detox Summary" section shows statistics on filtered content
-    * Click **"Reset Stats"** to clear these counts
+6. **Detox Summary** – View and reset counts for filtered tweets.
 
-**Note:** Filters are applied dynamically as you scroll through Twitter/X. For immediate effect on already loaded content, a page refresh might be necessary after changing filter settings.
+> 💡 **Tip**: Refresh the Twitter page to apply filter changes instantly.
 
 ---
 
-## 💻 Development
+## 💻 Project Structure
 
-The extension's core logic resides in the `src/` directory:
+All code lives inside the `src/` folder:
 
-* `popup.html` & `popup.js`: The user interface and logic for the extension's popup
-* `background.js`: The service worker handling timer logic, message passing, and background tasks
-* `content.js` & `content.css`: Scripts and styles injected into Twitter/X pages to perform filtering and DOM manipulation
-* `manifest.json`: The extension's manifest file defining its properties, permissions, and entry points
-* `input.css` & Tailwind CSS Config (`tailwind.config.js`, `postcss.config.js`): Source files for styling. `output.css` is the compiled stylesheet
-
-### Building CSS
-
-If you modify the Tailwind CSS utility classes or `src/input.css`:
-
-1. Ensure Node.js and npm are installed  
-2. Install project dependencies:
-    ```bash
-    npm install
-    ```
-3. Build CSS once:
-    ```bash
-    npm run build:css
-    ```
-4. Or, watch for changes and rebuild CSS automatically during development:
-    ```bash
-    npm run watch:css
-    ```
+| File/Folder         | Purpose |
+|---------------------|---------|
+| `popup.html/js`     | UI and logic for popup |
+| `background.js`     | Timer, inter-script messaging |
+| `content.js/css`    | DOM manipulation, filtering |
+| `manifest.json`     | Extension metadata and permissions |
+| `input.css`         | Tailwind CSS source |
+| `output.css`        | Compiled stylesheet (used by extension) |
 
 ---
 
-## 🌟 Future Updates
+## 🌈 CSS Development
 
-Here's what's being considered for future versions:
+If you're editing styles:
 
-🔜 **Advanced AI Models**: Potential for more nuanced toxicity detection using NLP techniques (would likely require backend infrastructure)  
-🔜 **Multi-Language Support**: Extend filtering capabilities to tweets in various languages  
-🔜 **Import/Export Settings**: Allow users to backup and share their filter configurations  
-🔜 **UI/UX Enhancements**: Continuously refine the user interface for better usability and accessibility  
-🔜 **Dark Mode for Popup**: A dedicated dark mode for the extension popup itself (though it currently uses a dark theme)
+1. Install dependencies: `npm install`
+2. Build once: `npm run build:css`
+3. Or auto-watch: `npm run watch:css`
+
+Tailwind config lives in:
+- `tailwind.config.js`
+- `postcss.config.js`
 
 ---
 
-## 💬 Contributing
+## 🔮 Future Plans
 
-We welcome contributions! 🎉 If you'd like to help improve Twitter Detoxifier, please follow these steps:
+- 🔜 **AI-based Filtering** (advanced NLP for toxicity detection)
+- 🔜 **Multi-Language Support**
+- 🔜 **Import/Export Settings**
+- 🔜 **Dark Mode Toggle** (dedicated UI setting)
+- 🔜 **Improved UX**
 
-1. **Fork** the repository  
-2. Create a **new branch** for your feature or bug fix:
-    ```bash
-    git checkout -b feature/your-amazing-feature
-    ```
-3. Make your changes and **commit** them with clear, descriptive messages:
-    ```bash
-    git commit -m "Add: Implement your amazing feature"
-    ```
-4. **Push** your changes to your forked repository:
-    ```bash
-    git push origin feature/your-amazing-feature
-    ```
-5. Open a **Pull Request** to the `main` branch of the original repository
+---
 
-Please ensure your code adheres to the existing style and that any UI changes are responsive and user-friendly
+## 🤝 Contributing
+
+1. **Fork** the repo
+2. Create a branch:
+    ```bash
+    git checkout -b feature/your-feature
+    ```
+3. Commit with clear messages:
+    ```bash
+    git commit -m "Add: New feature"
+    ```
+4. Push and open a PR:
+    ```bash
+    git push origin feature/your-feature
+    ```
+
+Please follow the existing code style and keep the UI responsive.
 
 ---
 
 ## 🛡️ License
 
-This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
+This project is under the [MIT License](LICENSE).
 
 ---
 
-## 📧 Contact
+## 📬 Contact
 
-For any inquiries, support, or feedback, please contact:
+**Kunj Shah**
 
-**Kunj Shah**  
-* GitHub: [KunjShah95](https://github.com/KunjShah95)  
-* Email: kunjshah572005@example.com (Please update if this is a placeholder)
-
+- GitHub: [@KunjShah95](https://github.com/KunjShah95)
+- Email: `kunjshah572005@example.com` 
 ---
 
-## 🏆 Acknowledgments
+## 🙏 Acknowledgments
 
-* Thanks to the open-source community for the tools and libraries that make projects like this possible
-* Special thanks to all contributors and users for their valuable feedback and support
+- Thanks to the open-source community 🙌
+- Special gratitude to contributors and users who provide feedback ❤️
 
 ---
 
