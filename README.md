@@ -1,36 +1,20 @@
-# 🌟 TWITTER-DETOXIFY 🚀
+# Twitter Detoxifier Browser Extension
 
-![License](https://img.shields.io/github/license/KunjShah95/TWITTER-DETOXIFY?style=for-the-badge)
-![Last Commit](https://img.shields.io/github/last-commit/KunjShah95/TWITTER-DETOXIFY?style=for-the-badge)
-![Repo Stars](https://img.shields.io/github/stars/KunjShah95/TWITTER-DETOXIFY?style=for-the-badge)
-![Contributors](https://img.shields.io/github/contributors/KunjShah95/TWITTER-DETOXIFY?style=for-the-badge)
+## Overview
+A browser extension to help you detoxify your Twitter feed by filtering unwanted content and allowing you to block Twitter for set periods to focus on your work.
 
-<div align="center">
-  <img src="https://media.giphy.com/media/3o7abldj0b3rxrZUxW/giphy.gif" alt="Twitter Detoxify GIF" width="400px">
-</div>
+## Features
+- Keyword/Phrase Filtering
+- User/Account Muting/Blocking
+- Content-Type Filtering
+- Sentiment Analysis (planned)
+- Timer-based Blocking (MVP)
 
----
-
-## ✨ Overview
-
-TWITTER-DETOXIFY is a **powerful tool** designed to help users manage their Twitter experience by identifying and filtering out toxicity. Whether you're looking to create a more positive timeline or perform sentiment analysis on tweets, this project has you covered. 🌈
-
----
-
-## ⚙️ Features
-
-✅ **Toxicity Detection**: Automatically identify toxic tweets.  
-✅ **Customizable Filters**: Tailor the filters to your preferences.  
-✅ **Sentiment Analysis**: Gain insights into tweet sentiment (positive, neutral, or negative).  
-✅ **User-Friendly Interface**: Intuitive design for ease of use.  
-✅ **Future-Proof**: Designed to integrate with future Twitter API updates.  
-
----
 ## Getting Started
 
 ### 1. Clone the repository
 ```bash
-   git clone https://github.com/KunjShah95/TWITTER-DETOXIFY.git
+git clone <your-repo-url>
 cd twitter-detoxifier-extension
 ```
 
@@ -46,49 +30,6 @@ cd twitter-detoxifier-extension
 ## Development
 - The extension is built using HTML, CSS, and JavaScript (vanilla or with a framework if needed).
 - See the `src/` directory for source code.
-🛠️ Tech Stack
-Frontend: HTML, CSS, JavaScript
-Backend: Node.js
-Libraries: Twitter API, Sentiment Analysis APIs
-🌟 Future Updates
-Here's what's coming next:
 
-🔜 Enhanced AI Models: More accurate toxicity detection using advanced NLP techniques.
-
-🔜 Multi-Language Support: Detect toxicity in tweets across various languages.
-
-🔜 Mobile App: A dedicated app for iOS and Android platforms.
-
-🔜 Dark Mode: For a more pleasant user experience during nighttime.
-
-💬 Contributing
-
-We welcome contributions! 🎉
-
-Here’s how you can help:
-
-Fork the repository.
-Create a new branch:
-``` git checkout -b feature-name ```
-Commit your changes:
-```git commit -m "Add feature-name" ```
-Push to the branch:
-```git push origin feature-name ```
-Open a pull request.
-🛡️ License
-This project is licensed under the MIT License.
-
-📧 Contact
-For any inquiries or support, contact:
-
-Kunj Shah
-GitHub: KunjShah95
-Email: kunjshah572005@example.com
-🏆 Acknowledgments
-
-Thanks to the amazing Twitter API community!
-
-Special thanks to all contributors and users providing feedback and support.
-
-
-``` <div align="center"> Made with ❤️ by [KunjShah95](https://github.com/KunjShah95) </div> ```
+## License
+MIT 
