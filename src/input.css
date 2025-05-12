@@ -1,0 +1,42 @@
+/* src/input.css */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --- Custom Scrollbar (WebKit Browsers) --- */
+::-webkit-scrollbar {
+  width: 8px; /* Adjust width as needed */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #1e293b; /* slate-800 */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #0891b2; /* cyan-600 */
+  border-radius: 10px;
+  border: 2px solid #1e293b; /* slate-800 - Creates padding around thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #06b6d4; /* cyan-500 */
+}
+
+/* --- Body Background --- */
+body {
+  /* Static Gradient: Dark Slate to slightly lighter Slate/Blue */
+  background: linear-gradient(160deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+  /* Ensure minimum height if content is short, useful for seeing gradient */
+  min-height: 300px; /* Adjust as needed based on your content */
+}
+
+/* Optional: Firefox scrollbar styling (simpler) */
+/* * {
+  scrollbar-width: thin;
+  scrollbar-color: #0891b2 #1e293b; /* thumb track */
+/* } */
+
+/* --- End Custom Styles --- */
