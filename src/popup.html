@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Detoxifier</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+    <h2>Twitter Detoxifier</h2>
+
+    <!-- Timer Blocking Section -->
+    <div class="timer-input-grid">
+        <div>
+            <label for="hours">Block Site for (Hours):</label>
+            <select id="hours">
+                <!-- Options will be populated by JS -->
+            </select>
+        </div>
+        <div>
+            <label for="minutes">Block Site for (Minutes):</label>
+            <select id="minutes">
+                <!-- Options will be populated by JS -->
+            </select>
+        </div>
+    </div>
+    <button id="blockBtn">Start Site Block</button>
+    <button id="unlockBtn" style="background-color: #f44336; display: none;">Unlock Site Now</button>
+    <!-- Unlock button, initially hidden -->
+    <div id="status"></div>
+
+    <hr style="border: 1px solid rgba(255,255,255,0.2); margin: 20px 0;">
+
+    <!-- Keyword Filtering Section -->
+    <h3>Keyword Filtering</h3>
+    <label for="keywords">Keywords to Hide (one per line):</label>
+    <textarea id="keywords" rows="4" placeholder="e.g., politics, negative news, specific_hashtag"></textarea>
+    <button id="saveKeywordsBtn">Save Keywords</button>
+    <div id="keywordsStatus"></div>
+
+    <hr style="border: 1px solid rgba(255,255,255,0.2); margin: 20px 0;">
+
+    <!-- User & Account Blocking Section -->
+    <h3>User & Account Blocking</h3>
+    <label for="blockedUsers">Blocked Users/Accounts (one per line, e.g., @username):</label>
+    <textarea id="blockedUsers" rows="4" placeholder="e.g., @annoyingUser, @spamAccount"></textarea>
+    <button id="saveBlockedUsersBtn">Save Blocked Users</button>
+    <div id="blockedUsersStatus"></div>
+
+    <hr style="border: 1px solid rgba(255,255,255,0.2); margin: 20px 0;">
+
+    <!-- Content-Type Filtering Section -->
+    <h3>Content-Type Filtering</h3>
+    <div>
+        <input type="checkbox" id="hideImages" name="hideImages">
+        <label for="hideImages" class="checkbox-label">Hide tweets with images</label>
+    </div>
+    <div>
+        <input type="checkbox" id="hideVideos" name="hideVideos">
+        <label for="hideVideos" class="checkbox-label">Hide tweets with videos</label>
+    </div>
+    <button id="saveContentFiltersBtn" style="margin-top: 15px;">Apply Content Filters</button>
+    <div id="contentFiltersStatus"></div>
+
+    <hr style="border: 1px solid rgba(255,255,255,0.2); margin: 20px 0;">
+
+    <!-- Detoxification Summary -->
+    <h3>Detoxification Summary</h3>
+    <div class="summary-stats">
+        <p>Keywords Filtered: <span id="keywordsCount">0</span></p>
+        <p>Users Blocked: <span id="usersCount">0</span></p>
+        <p>Images Hidden: <span id="imagesCount">0</span></p>
+        <p>Videos Hidden: <span id="videosCount">0</span></p>
+    </div>
+    <button id="resetStatsBtn">Reset Stats</button>
+    <div id="statsStatus"></div>
+
+
+    <script src="popup.js"></script>
+</body>
+
+</html>
